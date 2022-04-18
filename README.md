@@ -1,4 +1,4 @@
-# Node Crud with TypeScript and MongoDB
+# Node API with TypeScript and MongoDB
 
 ### This is a CRUD made in Node
 
