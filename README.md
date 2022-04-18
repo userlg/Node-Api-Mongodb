@@ -23,4 +23,19 @@ npm run start
 
 + You must have installed Mongodb
 
+# Dockerfile
+
+### This project contains the Dockerfile to create containers
+
+### To create the image
+
+```
+docker build -t appname .
+```
+
+### To run the container
+```
+docker run -it -p 8000:8000 appname
+```
+
 ### Created by Userlg
