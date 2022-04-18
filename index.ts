@@ -1,5 +1,10 @@
 import app from './app'
 
+import {startConnection} from './database';
+
+
+startConnection();
+
 let port = 8000;
 
 
