@@ -2,15 +2,15 @@
 
 ### This is a simple rest api with typescript and mongodb
 
-![Capture 1](assets/node.svg)
+![Capture 1](assets/node.png)
 
-![Capture 3](assets/docker.svg)
+![Capture 3](assets/docker.png)
 --------------------------------
 
-![Capture 2](assets/ts.svg)
+![Capture 2](assets/ts.png)
 --------------------------------
 
-![Capture 4](assets/mongo.svg)
+![Capture 4](assets/mongo.png)
 --------------------------------
 
 --------------------------------
