@@ -25,14 +25,14 @@
 npm run dev
 ```
 
-+ Build the project 
++ Build the project. This generate a dist folder with the javascript files
 ```
 npm run build
 ```
 
-+ Run the project in Production
++ Run the project in Development
 ```
-npm run start
+npm run dev
 ```
 
 + You must have installed Mongodb to run locally
