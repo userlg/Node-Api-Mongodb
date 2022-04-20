@@ -4,13 +4,16 @@ FROM node:16-alpine
 RUN apk update
 
 # create root application folder
+
+RUN mkdir -p /usr/src/app
+
 WORKDIR /usr/src/app
 
 # copy configs to /app folder
 COPY package*.json ./
 COPY tsconfig.json ./
 # copy source code to /app/src folder
-COPY . .
+COPY . /usr/src/app/
 
 # check files list
 RUN ls -a
@@ -23,4 +26,4 @@ RUN npm run build
 
 EXPOSE 8000
 
-CMD [ "node", "./dist/index.js" ]
+CMD [ "npm", "start" ]
