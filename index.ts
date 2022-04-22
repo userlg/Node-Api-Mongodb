@@ -1,4 +1,4 @@
-import app from './app'
+import app from './app';
 
 import {startConnection} from './database';
 
@@ -9,6 +9,6 @@ let port = 8000;
 
 
 
-app.listen(port), () => {
-    console.log('Server running on port ' + port);
-};
+app.listen(port, () => {
+    console.log(`Server listening on port--->${port}`);
+});
