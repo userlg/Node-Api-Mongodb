@@ -12,7 +12,7 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
-//app.use('/api',router);
+app.use('/api',router);
 
 app.get("/",(req, res) => {
     var message = "<h2>Welcome to this View </h2>"

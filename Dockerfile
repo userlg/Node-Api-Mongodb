@@ -1,19 +1,21 @@
-FROM node:16-alpine
+FROM node:19-alpine as builder
 
 # update packages
-RUN apk update
+RUN apk update && apk upgrade
 
 # create root application folder
+ENV APP_HOME /usr/src/app
 
-RUN mkdir -p /usr/src/app
+WORKDIR "$APP_HOME"
 
-WORKDIR /usr/src/app
+RUN mkdir -p "$APP_HOME"
 
 # copy configs to /app folder
 COPY package*.json ./
+
 COPY tsconfig.json ./
 # copy source code to /app/src folder
-COPY . /usr/src/app/
+COPY . "$APP_HOME"
 
 # check files list
 RUN ls -a
@@ -23,6 +25,16 @@ RUN npm install
 RUN npm fund
 
 RUN npm run build
+
+FROM node:19-alpine
+
+ENV APP_HOME /usr/src/app
+
+RUN mkdir -p -v "$APP_HOME"
+
+WORKDIR "$APP_HOME"
+
+COPY --from=builder "$APP_HOME" $APP_HOME
 
 EXPOSE 8000
 
